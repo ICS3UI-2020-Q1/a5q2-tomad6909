@@ -1,6 +1,7 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ * This program will prompt the user for a positive integer and then print the numbers from 1 to that number on a single line with commas in between them
+ * @author David Toma
  */
 public class Main {
 
@@ -9,7 +10,19 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
+    // create scanner for user input
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Please enter a positive integer");
+    int integer = input.nextInt();
+
+    for(int count = 1; count <= integer; count++){
+      if(count == integer){
+        System.out.print(integer);
+      } else if(count < integer){
+        System.out.print(count + ",");
+      }
+    }
     
   }
 }
